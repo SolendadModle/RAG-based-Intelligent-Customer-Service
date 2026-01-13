@@ -1,13 +1,20 @@
-#!/usr/bin/env python3
 """
 Main entry point for the RAG Customer Service System.
 Run this script to start both API and frontend.
+
+Usage:
+    python run.py           # Start both backend and frontend
+    python run.py --help    # Show help message
+
+Note: The shebang line (#!/usr/bin/env python3) has been removed for
+      better Windows compatibility. Use 'python run.py' to run the script.
 """
 
 import os
 import sys
 import subprocess
 import time
+import argparse
 from multiprocessing import Process
 
 def start_api():
@@ -23,6 +30,21 @@ def start_frontend():
 
 def main():
     """Main entry point."""
+    parser = argparse.ArgumentParser(
+        description='RAG-based Intelligent Customer Service System',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python run.py              # Start both backend and frontend
+  python run.py --help       # Show this help message
+
+For Windows users:
+  If you encounter errors, make sure to use 'python run.py' instead of './run.py'
+        """
+    )
+    parser.add_argument('--version', action='version', version='1.0.0')
+    args = parser.parse_args()
+    
     print("=" * 60)
     print("RAG-based Intelligent Customer Service System")
     print("=" * 60)
@@ -39,6 +61,8 @@ def main():
             sys.exit(1)
     
     print("Starting services...")
+    print()
+    print("💡 Tip: Press Ctrl+C to stop all services")
     print()
     
     # Start API in separate process

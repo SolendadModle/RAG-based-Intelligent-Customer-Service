@@ -62,6 +62,8 @@ A comprehensive end-to-end intelligent customer service system powered by Retrie
 
 ## 🚀 Quick Start
 
+> **🪟 Windows Users**: See [Windows Setup Guide](docs/WINDOWS_GUIDE.md) for detailed Windows-specific instructions.
+
 ### 1. Clone and Install
 
 ```bash
@@ -280,6 +282,15 @@ This project is provided as-is for educational and commercial use.
 - **FAISS** - Vector search
 - **FastAPI** - Web framework
 - **Streamlit** - Frontend interface
+
+## 📚 Additional Documentation
+
+- **[Usage Guide](docs/USAGE_GUIDE.md)** - Comprehensive bilingual (EN/CN) guide
+- **[Windows Guide](docs/WINDOWS_GUIDE.md)** - 🪟 Windows-specific setup and troubleshooting
+- **[Frontend Comparison](docs/FRONTEND_COMPARISON.md)** - Compare Basic vs Enhanced UI
+- **[API Documentation](docs/API.md)** - Complete API reference
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Production deployment instructions
+- **[Security Guide](docs/SECURITY.md)** - Security best practices
 
 ## 📞 Support
 
