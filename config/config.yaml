@@ -1,0 +1,184 @@
+# RAG-based Intelligent Customer Service Configuration
+
+# System Configuration
+system:
+  name: "RAG Customer Service"
+  version: "1.0.0"
+  environment: "development"
+
+# NLU Configuration
+nlu:
+  intent_recognition:
+    enabled: true
+    model: "en_core_web_sm"
+    threshold: 0.7
+    supported_intents:
+      - "greeting"
+      - "farewell"
+      - "product_inquiry"
+      - "technical_support"
+      - "billing_inquiry"
+      - "complaint"
+      - "feedback"
+      - "order_status"
+      - "return_request"
+      - "general_question"
+  
+  entity_extraction:
+    enabled: true
+    entities:
+      - "PERSON"
+      - "ORG"
+      - "PRODUCT"
+      - "DATE"
+      - "MONEY"
+      - "QUANTITY"
+      - "ORDER_ID"
+
+# Knowledge Base Configuration
+knowledge_base:
+  type: "faiss"
+  embedding:
+    model: "sentence-transformers/all-MiniLM-L6-v2"
+    dimension: 384
+    batch_size: 32
+  
+  retrieval:
+    top_k: 5
+    similarity_threshold: 0.7
+    max_context_length: 2000
+  
+  sources:
+    - type: "faq"
+      path: "./data/knowledge_base/faq.json"
+    - type: "documents"
+      path: "./data/knowledge_base/documents/"
+
+# Generation Configuration (Qianwen API)
+generation:
+  provider: "qianwen"
+  model: "qwen-turbo"
+  parameters:
+    temperature: 0.7
+    top_p: 0.9
+    max_tokens: 1000
+    repetition_penalty: 1.1
+  
+  prompt_templates:
+    system: "You are a helpful and professional customer service assistant. Use the provided context to answer user questions accurately and politely."
+    rag: "Context: {context}\n\nConversation History: {history}\n\nUser Question: {question}\n\nPlease provide a helpful and accurate response based on the context above."
+
+# Dialog Management
+dialog:
+  max_history_turns: 10
+  session_timeout: 1800  # 30 minutes
+  context_window: 5  # number of previous turns to consider
+  
+  state_tracking:
+    enabled: true
+    states:
+      - "initial"
+      - "information_gathering"
+      - "processing"
+      - "resolution"
+      - "escalation"
+      - "closed"
+
+# Sentiment Analysis
+sentiment:
+  enabled: true
+  model: "distilbert-base-uncased-finetuned-sst-2-english"
+  threshold:
+    positive: 0.7
+    negative: 0.6
+  
+  escalation:
+    enabled: true
+    negative_threshold: 0.8
+    urgency_keywords:
+      - "urgent"
+      - "emergency"
+      - "asap"
+      - "immediately"
+      - "critical"
+
+# Recommendation Engine
+recommendation:
+  enabled: true
+  algorithm: "collaborative"
+  max_recommendations: 5
+  similarity_threshold: 0.65
+  
+  categories:
+    - "products"
+    - "services"
+    - "solutions"
+    - "resources"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  reload: true
+  
+  cors:
+    enabled: true
+    origins:
+      - "*"
+    methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+    headers:
+      - "*"
+  
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+  
+  websocket:
+    enabled: true
+    heartbeat_interval: 30
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "json"
+  path: "./data/logs"
+  
+  handlers:
+    console:
+      enabled: true
+      level: "INFO"
+    
+    file:
+      enabled: true
+      level: "DEBUG"
+      rotation: "100 MB"
+      retention: "30 days"
+  
+  log_conversations: true
+  log_api_calls: true
+
+# Monitoring
+monitoring:
+  enabled: true
+  metrics:
+    - "response_time"
+    - "query_count"
+    - "error_rate"
+    - "user_satisfaction"
+    - "intent_distribution"
+  
+  health_check:
+    enabled: true
+    interval: 60  # seconds
+
+# Cache Configuration
+cache:
+  enabled: true
+  backend: "memory"  # or "redis"
+  ttl: 3600  # 1 hour
+  max_size: 1000
