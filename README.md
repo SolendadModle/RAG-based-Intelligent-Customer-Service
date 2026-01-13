@@ -83,22 +83,33 @@ cp .env.example .env
 ### 3. Run
 
 ```bash
-# Option 1: Run both services
+# Option 1: Run both services (recommended)
 python run.py
 
 # Option 2: Run separately
-# Terminal 1 - API
+# Terminal 1 - Backend API
 python -m src.api.app
 
-# Terminal 2 - Frontend
-streamlit run src/frontend/streamlit_app.py
+# Terminal 2 - Frontend (choose one)
+streamlit run src/frontend/streamlit_app.py          # Basic UI
+streamlit run src/frontend/enhanced_app.py           # Enhanced UI (Recommended ⭐)
 ```
 
 ### 4. Access
 
-- **Web Interface**: http://localhost:8501
-- **API Documentation**: http://localhost:8000/docs
-- **API Endpoint**: http://localhost:8000
+- **Web Interface**: http://localhost:8501 (Frontend)
+- **API Documentation**: http://localhost:8000/docs (Interactive API docs)
+- **API Endpoint**: http://localhost:8000 (Backend)
+
+### Frontend Options
+
+1. **Basic Frontend** (`streamlit_app.py`) - Simple and functional interface
+2. **Enhanced Frontend** (`enhanced_app.py`) ⭐ **NEW!** - Modern design with:
+   - 🎨 Beautiful gradient design
+   - 📊 Interactive charts and analytics
+   - ✨ Smooth animations
+   - 📱 Responsive layout
+   - 💡 Improved user experience
 
 ## 📁 Project Structure
 
