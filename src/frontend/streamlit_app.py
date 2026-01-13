@@ -2,6 +2,7 @@
 Streamlit Frontend - Interactive web interface for customer service chatbot.
 """
 
+import os
 import streamlit as st
 import requests
 import json
@@ -17,7 +18,7 @@ st.set_page_config(
 )
 
 # API Configuration
-API_BASE_URL = "http://localhost:8000"
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 
 # Custom CSS
 st.markdown("""

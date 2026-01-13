@@ -62,7 +62,7 @@ def get_project_root() -> Path:
     Returns:
         Path object representing project root
     """
-    return Path(__file__).parent.parent.parent
+    return Path(__file__).parent.parent
 
 
 def ensure_directory(directory_path: str) -> None:

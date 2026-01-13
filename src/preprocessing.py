@@ -188,11 +188,12 @@ class TextPreprocessor:
         # Normalize scores
         if sorted_keywords:
             max_freq = sorted_keywords[0][1]
-            scored_keywords = [
-                (word, count / max_freq)
-                for word, count in sorted_keywords[:top_n]
-            ]
-            return scored_keywords
+            if max_freq > 0:
+                scored_keywords = [
+                    (word, count / max_freq)
+                    for word, count in sorted_keywords[:top_n]
+                ]
+                return scored_keywords
         
         return []
     
