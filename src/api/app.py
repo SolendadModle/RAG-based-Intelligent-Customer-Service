@@ -13,6 +13,30 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
 import uvicorn
 
+# Download NLTK data before other imports to prevent errors
+try:
+    import nltk
+    import ssl
+    
+    # Handle SSL certificate issues
+    try:
+        _create_unverified_https_context = ssl._create_unverified_context
+    except AttributeError:
+        pass
+    else:
+        ssl._create_default_https_context = _create_unverified_https_context
+    
+    # Download required NLTK data silently
+    required_data = ['wordnet', 'stopwords', 'punkt', 'omw-1.4']
+    for data_name in required_data:
+        try:
+            nltk.data.find(f'corpora/{data_name}' if data_name in ['wordnet', 'stopwords', 'omw-1.4'] else f'tokenizers/{data_name}')
+        except LookupError:
+            print(f"Downloading NLTK {data_name}...")
+            nltk.download(data_name, quiet=True)
+except Exception as e:
+    print(f"Warning: Could not download NLTK data: {e}")
+
 from src.api.models import (
     ChatRequest, ChatResponse, SessionInfo, NLURequest, NLUResponse,
     RetrievalRequest, RetrievalResponse, RecommendationRequest, RecommendationResponse,
