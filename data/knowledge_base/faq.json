@@ -1,0 +1,102 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "answer": "To reset your password, click on 'Forgot Password' on the login page, enter your email address, and follow the instructions sent to your email. If you don't receive the email within 5 minutes, please check your spam folder or contact support.",
+    "category": "account"
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "answer": "We accept various payment methods including credit cards (Visa, MasterCard, American Express), debit cards, PayPal, bank transfers, and digital wallets. All transactions are secured with industry-standard encryption.",
+    "category": "billing"
+  },
+  {
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping typically takes 3-5 business days. Express shipping is available for 1-2 business day delivery. International orders may take 7-14 business days depending on the destination country.",
+    "category": "shipping"
+  },
+  {
+    "question": "What is your return policy?",
+    "answer": "We offer a 30-day return policy for most items. Products must be unused and in original packaging. To initiate a return, log into your account, go to order history, and select the item you wish to return. Refunds are processed within 5-7 business days after we receive the returned item.",
+    "category": "returns"
+  },
+  {
+    "question": "How can I track my order?",
+    "answer": "Once your order ships, you'll receive a tracking number via email. You can also track your order by logging into your account and visiting the 'Order History' section. Click on the order number to see detailed tracking information.",
+    "category": "shipping"
+  },
+  {
+    "question": "Do you offer technical support?",
+    "answer": "Yes, we provide 24/7 technical support through multiple channels: live chat, email (support@company.com), and phone. Premium customers receive priority support with guaranteed response times.",
+    "category": "support"
+  },
+  {
+    "question": "How do I cancel my subscription?",
+    "answer": "To cancel your subscription, log into your account, go to 'Subscription Settings', and click 'Cancel Subscription'. You'll continue to have access until the end of your current billing period. No refunds are provided for partial months.",
+    "category": "account"
+  },
+  {
+    "question": "What are your business hours?",
+    "answer": "Our customer service team is available Monday-Friday 9 AM - 6 PM EST. However, our online chat support and automated systems are available 24/7. Email support responses are typically provided within 24 hours.",
+    "category": "general"
+  },
+  {
+    "question": "Is my personal information secure?",
+    "answer": "Yes, we take data security very seriously. We use SSL encryption for all data transmission, comply with GDPR and CCPA regulations, and never share your personal information with third parties without your consent. Our systems undergo regular security audits.",
+    "category": "security"
+  },
+  {
+    "question": "Can I change my order after placing it?",
+    "answer": "Orders can be modified within 1 hour of placement. After that, the order enters our fulfillment system and cannot be changed. Please contact customer service immediately if you need to make changes.",
+    "category": "orders"
+  },
+  {
+    "question": "Do you offer student discounts?",
+    "answer": "Yes, we offer a 15% student discount. To verify your student status, please email proof of enrollment (student ID or enrollment letter) to student@company.com. Once verified, you'll receive a discount code valid for one year.",
+    "category": "promotions"
+  },
+  {
+    "question": "How do I upgrade my plan?",
+    "answer": "To upgrade your plan, go to 'Account Settings' > 'Subscription' > 'Upgrade Plan'. Select your desired plan and confirm. The upgrade takes effect immediately, and you'll be prorated for the current billing period.",
+    "category": "account"
+  },
+  {
+    "question": "What should I do if I receive a damaged product?",
+    "answer": "If you receive a damaged product, please contact us within 48 hours with photos of the damage. We'll arrange for a replacement to be sent immediately at no cost to you, and provide a prepaid return label for the damaged item.",
+    "category": "returns"
+  },
+  {
+    "question": "Can I use multiple promo codes?",
+    "answer": "Only one promotional code can be applied per order. If you have multiple codes, the system will automatically apply the one that gives you the best discount. Promo codes cannot be combined with other ongoing sales.",
+    "category": "promotions"
+  },
+  {
+    "question": "How do I update my billing information?",
+    "answer": "To update your billing information, log into your account, navigate to 'Payment Methods', and click 'Add New Payment Method' or 'Edit' next to an existing method. Changes take effect immediately for future transactions.",
+    "category": "billing"
+  },
+  {
+    "question": "What is your privacy policy?",
+    "answer": "Our privacy policy outlines how we collect, use, and protect your data. We only collect information necessary to provide our services, never sell your data, and you can request data deletion at any time. View our full privacy policy at www.company.com/privacy.",
+    "category": "security"
+  },
+  {
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 100 countries worldwide. International shipping costs and delivery times vary by destination. Customs fees and import taxes may apply and are the responsibility of the recipient.",
+    "category": "shipping"
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can reach our customer support team via: Live Chat (available on our website), Email (support@company.com), Phone (1-800-SUPPORT), or through our mobile app. We strive to respond to all inquiries within 24 hours.",
+    "category": "support"
+  },
+  {
+    "question": "What are the system requirements?",
+    "answer": "Our platform works on: Windows 10+, macOS 10.14+, Linux (Ubuntu 18.04+), iOS 13+, Android 8+. Supported browsers include Chrome 90+, Firefox 88+, Safari 14+, and Edge 90+. A stable internet connection is required.",
+    "category": "technical"
+  },
+  {
+    "question": "How do I delete my account?",
+    "answer": "To delete your account, go to 'Account Settings' > 'Privacy' > 'Delete Account'. You'll need to confirm your decision and enter your password. Note that account deletion is permanent and cannot be undone. All your data will be removed within 30 days.",
+    "category": "account"
+  }
+]
