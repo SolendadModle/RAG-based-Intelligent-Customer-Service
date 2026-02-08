@@ -285,6 +285,7 @@ This project is provided as-is for educational and commercial use.
 
 ## 📚 Additional Documentation
 
+- **[RAG Architecture (中文)](docs/RAG_ARCHITECTURE_CN.md)** - 🏗️ RAG架构详解：general_question处理流程与knowledge_base作用
 - **[Usage Guide](docs/USAGE_GUIDE.md)** - Comprehensive bilingual (EN/CN) guide
 - **[Windows Guide](docs/WINDOWS_GUIDE.md)** - 🪟 Windows-specific setup and troubleshooting
 - **[Frontend Comparison](docs/FRONTEND_COMPARISON.md)** - Compare Basic vs Enhanced UI
